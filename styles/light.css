@@ -4,10 +4,10 @@
   переключая тему
 */
 
-/*:root {
+:root .theme_light {
   --accent-color: rgb(255 141 203);
   --paragraph-font-family: rgb(53 52 48);
-}*/
+}
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
@@ -23,7 +23,14 @@
   padding: 0;
 }
 
-/*.decorated-element {
+.theme_light .decorated-element  {
   display: none;
-}*/
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: rgb(255 141 203);
+    --paragraph-font-family: rgb(53 52 48);    
+    }
+}
 
