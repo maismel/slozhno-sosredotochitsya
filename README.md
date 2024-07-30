@@ -1,0 +1,1 @@
+git@github.com:maismel/slozhno-sosredotochitsya.git
