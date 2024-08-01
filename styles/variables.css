@@ -4,10 +4,10 @@
 */
 :root {
   --accent-color: rgb(255 0 112);
+  --border-color: rgb(255 0 112/ 0.4);
   --paragraph-font-family: rgb(241 178 206);
   --main-font-size: 18px;
-  --main-font-family: 'IBM Plex mono', sans-serif;
+  --main-font-family: "IBM Plex mono", sans-serif;
   --background-image: url(../images/cover-image-dark.png);
   --title-color: rgb(219 0 255);
-  --border-color: rgb(255 0 112/ .4);
 }

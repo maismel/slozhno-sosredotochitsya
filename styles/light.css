@@ -6,10 +6,10 @@
 
 :root .theme_light {
   --accent-color: rgb(255 141 203);
+  --border-color: rgb(255 141 203/ 0.4);
   --paragraph-font-family: rgb(53 52 48);
   --background-image: url(../images/cover-image-light.png);
   --title-color: rgb(255 194 230);
-  --border-color: rgb(255 141 203/ .4);
 }
 
 .page.theme_light {
@@ -26,10 +26,10 @@
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: rgb(255 141 203);
+    --border-color: rgb(255 141 203/ 0.4);
     --paragraph-font-family: rgb(53 52 48);
     --background-image: url(../images/cover-image-light.png);
     --title-color: rgb(255 194 230);
-    --border-color: rgb(255 141 203/ .4);
   }
 
   .page {
