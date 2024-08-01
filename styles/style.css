@@ -43,7 +43,7 @@
 }
 
 .decorated-element::before {
-  content: "REC";
+  content: 'REC';
   font-family: var(--main-font-family);
   font-size: var(--main-font-size);
   font-weight: 400;
@@ -52,7 +52,7 @@
 }
 
 .decorated-element::after {
-  content: "";
+  content: '';
   width: 9px;
   height: 9px;
   border-radius: 50%;
@@ -81,7 +81,7 @@
 }
 
 .decorated-zone::before {
-  content: "";
+  content: '';
   width: 25px;
   height: 25px;
   background: transparent;
@@ -94,7 +94,7 @@
 }
 
 .decorated-zone::after {
-  content: "";
+  content: '';
   width: 25px;
   height: 25px;
   background: transparent;
@@ -192,7 +192,7 @@
   margin-bottom: 20px;
 }
 
-.main__description {
+.main__description { 
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -295,12 +295,14 @@
 /*****         SCREEN >= 768px         *****/
 
 @media (min-width: 768px) {
+
   .content {
     padding: 0 20px 20px;
   }
 
   .content__header {
     padding: 0;
+    margin-bottom: 20px;
   }
 
   /*****       HEADER        *****/
@@ -316,7 +318,7 @@
 
   .header__title {
     margin-top: 173px;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   }
 
   .header__description {
@@ -342,7 +344,7 @@
   /*****       SECTION MAIN       *****/
 
   .main {
-    margin-top: 82px;
+    margin-top: 62px;
     gap: 80px;
   }
 
@@ -358,6 +360,7 @@
     display: grid;
     grid-template-columns: minmax(236px, 315px) minmax(472px, 1fr);
     gap: 20px;
+
   }
 
   .main__subtitle {
@@ -430,7 +433,7 @@
   }
 
   /*****        HEADER           *****/
-
+  
   .header {
     height: 100vh;
     min-height: 748px;
@@ -438,7 +441,7 @@
 
   .header__title {
     line-height: 129.53px;
-    margin-top: 270px;
+    margin-top: 37vh;
   }
 
   .header__theme-menu {
@@ -453,13 +456,13 @@
 
   .header__description {
     width: 491px;
-    margin-top: 114px;
+    margin-top: 15.5vh;
   }
 
   /*****      SECTION MAIN        *****/
 
   .main {
-    margin-top: 80px;
+    margin-top: 60px;
   }
 
   .main__title {
@@ -487,6 +490,6 @@
   }
 
   .footer__title {
-    margin: 333px auto 0;
+    margin: 45.4vh auto 0;
   }
 }
