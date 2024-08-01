@@ -2,13 +2,13 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background: rgb(0 0 40);
-  background-image: url(../images/cover-image-dark.png);
+  background: #000028;
+  background-image: var(--background-image);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -17,9 +17,23 @@
   display: grid;
   grid-template-columns: 1fr;
   padding: 0 10px 10px;
-  min-height: 668px;
-  margin: auto;
+  margin: 0 auto;
   position: relative;
+}
+
+.content__header {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 10px 10px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content__footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 10px 10px;
+  margin: 0 auto;
 }
 
 .decorated-element {
@@ -53,6 +67,7 @@
 .header {
   width: 100%;
   height: 100vh;
+  min-height: 668px;
   display: flex;
   flex-direction: column;
 }
@@ -116,16 +131,16 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  outline: 1px solid var(--accent-color);
   pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid rgb(255 0 112 / 0.4);
+  outline: 1px solid var(--border-color);
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid rgb(255 0 112 / 0.4);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .header__theme-menu-button:focus-visible:not(.hover) {
@@ -134,10 +149,10 @@
 
 .header__title {
   font-family: var(--main-font-family);
-  font-size: 116px;
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   font-weight: 700;
   line-height: 95.7px;
-  color: rgb(219 0 255);
+  color: var(--title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
   margin-top: 64px;
 }
@@ -165,7 +180,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  margin-top: 58px;
+  margin-top: 40px;
 }
 
 .main__title {
@@ -174,10 +189,10 @@
   font-weight: 700;
   color: var(--accent-color);
   line-height: 23.4px;
+  margin-bottom: 20px;
 }
 
-.main__description {
-  margin-top: 20px;
+.main__description { 
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -190,7 +205,6 @@
 }
 
 .main__description-second {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -210,11 +224,11 @@
 }
 
 .link:hover {
-  border-bottom: 1px solid var(--paragraph-font-family);
+  border-bottom: 1px solid currentColor;
 }
 
 .link:focus {
-  outline: 1px solid var(--paragraph-font-family);
+  outline: 1px solid currentColor;
 }
 
 .link:focus:not(.hover) {
@@ -230,12 +244,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.main__subtitle-block {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 /*****        SECTION IMAGES        *****/
@@ -260,7 +268,8 @@
 
 .footer {
   height: 100vh;
-  margin-top: 40px;
+  min-height: 668px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -275,12 +284,12 @@
 .footer__title {
   display: block;
   font-family: var(--main-font-family);
-  font-size: 116px;
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   font-weight: 700;
   line-height: 95.7px;
-  color: rgb(219 0 255);
+  color: var(--title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
-  margin: 286px auto;
+  margin: 288px auto 0;
 }
 
 /*****         SCREEN >= 768px         *****/
@@ -288,26 +297,33 @@
 @media (min-width: 768px) {
 
   .content {
-    padding: 20px;
+    padding: 0 20px 20px;
+  }
+
+  .content__header {
+    padding: 0;
   }
 
   /*****       HEADER        *****/
 
   .header {
-    height: 982px;
+    min-height: 1002px;
   }
 
   .header__theme-menu {
-    margin-top: 170px;
+    margin-top: 190px;
+    margin-right: 20px;
   }
 
   .header__title {
     margin-top: 173px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   }
 
   .header__description {
     width: 364px;
     margin-top: 162px;
+    margin-right: 20px;
   }
 
   .decorated-element {
@@ -317,6 +333,11 @@
 
   .decorated-zone::before {
     top: 20px;
+    margin-right: 20px;
+  }
+
+  .decorated-zone::after {
+    margin-left: 20px;
   }
 
   /*****       SECTION MAIN       *****/
@@ -330,7 +351,7 @@
     width: 230px;
   }
 
-  .main__title-block-second {
+  .main__title-block-short {
     width: 200px;
   }
 
@@ -339,14 +360,6 @@
     grid-template-columns: minmax(236px, 315px) minmax(472px, 1fr);
     gap: 20px;
 
-  }
-
-  .main__description {
-    margin-top: 0;
-  }
-
-  .main__description-second {
-    display: flex;
   }
 
   .main__subtitle {
@@ -395,13 +408,15 @@
   }
 
   /*****       FOOTER        *****/
+
   .footer {
-    height: 988px;
-    margin-top: 60px;
+    min-height: 1008px;
+    margin-top: 40px;
   }
 
   .footer__title {
-    margin: 470px auto 420px;
+    margin: 468px auto 0;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
@@ -412,20 +427,25 @@
     width: 1024px;
   }
 
+  .content__header {
+    width: 1024px;
+  }
+
   /*****        HEADER           *****/
   
   .header {
     height: 100vh;
+    min-height: 748px;
   }
 
   .header__title {
-    font-size: 157px;
     line-height: 129.53px;
     margin-top: 270px;
   }
 
   .header__theme-menu {
-    margin-top: 0;
+    margin-top: 20px;
+    margin-right: 0;
     align-self: center;
   }
 
@@ -441,21 +461,17 @@
   /*****      SECTION MAIN        *****/
 
   .main {
-    margin-top: 70px;
+    margin-top: 80px;
   }
 
   .main__title {
     width: 315px;
   }
 
-  .main__description-second {
+  .main__description-columns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-  }
-
-  .main__title-block-second {
-    width: 315px;
   }
 
   /*****      SECTION IMAGES        *****/
@@ -468,16 +484,11 @@
 
   .footer {
     height: 100vh;
-    margin-top: 65px;
-  }
-
-  .footer__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 748px;
+    margin-top: 48px;
   }
 
   .footer__title {
-    font-size: 157px;
+    margin: 333px auto 0;
   }
 }
