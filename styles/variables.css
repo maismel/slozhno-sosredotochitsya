@@ -10,4 +10,8 @@
   --main-font-family: "IBM Plex mono", sans-serif;
   --background-image: url(../images/cover-image-dark.png);
   --title-color: rgb(219 0 255);
+  --background-color: #000028;
+  --section-titles-color: rgb(255 0 112);
+  --section-subtitles-color: rgb(0 0 40);
+  --decorated-zone-color: rgb(255 0 112);
 }

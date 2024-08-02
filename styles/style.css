@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background: #000028;
+  background: var(--background-color);
   background-image: var(--background-image);
   background-size: cover;
   background-repeat: no-repeat;
@@ -43,7 +43,7 @@
 }
 
 .decorated-element::before {
-  content: 'REC';
+  content: "REC";
   font-family: var(--main-font-family);
   font-size: var(--main-font-size);
   font-weight: 400;
@@ -52,7 +52,7 @@
 }
 
 .decorated-element::after {
-  content: '';
+  content: "";
   width: 9px;
   height: 9px;
   border-radius: 50%;
@@ -81,12 +81,12 @@
 }
 
 .decorated-zone::before {
-  content: '';
+  content: "";
   width: 25px;
   height: 25px;
   background: transparent;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--decorated-zone-color);
+  border-right: 1px solid var(--decorated-zone-color);
   display: inline-block;
   align-self: flex-end;
   position: absolute;
@@ -94,12 +94,12 @@
 }
 
 .decorated-zone::after {
-  content: '';
+  content: "";
   width: 25px;
   height: 25px;
   background: transparent;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--decorated-zone-color);
+  border-left: 1px solid var(--decorated-zone-color);
   display: inline-block;
   align-self: flex-start;
 }
@@ -120,7 +120,7 @@
   font-family: var(--main-font-family);
   font-size: var(--main-font-size);
   font-weight: 400;
-  color: var(--accent-color);
+  color: var(--decorated-zone-color);
 }
 
 .header__theme-menu-button {
@@ -131,7 +131,7 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--decorated-zone-color);
   pointer-events: none;
 }
 
@@ -166,7 +166,7 @@
   font-family: var(--main-font-family);
   font-size: var(--main-font-size);
   font-weight: 700;
-  color: #000;
+  color: var(--section-subtitles-color);
   background: var(--accent-color);
 }
 
@@ -187,12 +187,12 @@
   font-family: var(--main-font-family);
   font-size: var(--main-font-size);
   font-weight: 700;
-  color: var(--accent-color);
+  color: var(--section-titles-color);
   line-height: 23.4px;
   margin-bottom: 20px;
 }
 
-.main__description { 
+.main__description {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -202,12 +202,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.main__description-second {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 .main__description-text {
@@ -295,7 +289,6 @@
 /*****         SCREEN >= 768px         *****/
 
 @media (min-width: 768px) {
-
   .content {
     padding: 0 20px 20px;
   }
@@ -308,7 +301,7 @@
   /*****       HEADER        *****/
 
   .header {
-    min-height: 1002px;
+    height: 1002px;
   }
 
   .header__theme-menu {
@@ -318,7 +311,7 @@
 
   .header__title {
     margin-top: 173px;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__description {
@@ -352,15 +345,18 @@
     width: 230px;
   }
 
-  .main__title-block-short {
+  .main__title-block {
     width: 200px;
+  }
+
+  .main__title-content {
+    margin-bottom: 0;
   }
 
   .main__block {
     display: grid;
     grid-template-columns: minmax(236px, 315px) minmax(472px, 1fr);
     gap: 20px;
-
   }
 
   .main__subtitle {
@@ -411,7 +407,7 @@
   /*****       FOOTER        *****/
 
   .footer {
-    min-height: 1008px;
+    height: 1008px;
     margin-top: 40px;
   }
 
@@ -433,15 +429,14 @@
   }
 
   /*****        HEADER           *****/
-  
+
   .header {
-    height: 100vh;
-    min-height: 748px;
+    height: 748px;
   }
 
   .header__title {
     line-height: 129.53px;
-    margin-top: 37vh;
+    margin-top: 35.5vh;
   }
 
   .header__theme-menu {
@@ -456,7 +451,7 @@
 
   .header__description {
     width: 491px;
-    margin-top: 15.5vh;
+    margin-top: 15vh;
   }
 
   /*****      SECTION MAIN        *****/
@@ -469,7 +464,7 @@
     width: 315px;
   }
 
-  .main__description-columns {
+  .main__description-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -484,12 +479,11 @@
   /*****       FOOTER        *****/
 
   .footer {
-    height: 100vh;
-    min-height: 748px;
+    height: 748px;
     margin-top: 48px;
   }
 
   .footer__title {
-    margin: 45.4vh auto 0;
+    margin: 43.2vh auto 0;
   }
 }

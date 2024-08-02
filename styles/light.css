@@ -6,10 +6,14 @@
 
 :root .theme_light {
   --accent-color: rgb(255 141 203);
-  --border-color: rgb(255 141 203/ 0.4);
+  --border-color: rgb(50 49 45 / 0.4);
   --paragraph-font-family: rgb(53 52 48);
   --background-image: url(../images/cover-image-light.png);
   --title-color: rgb(255 194 230);
+  --background-color: #fff1f7;
+  --section-titles-color: rgb(53 52 48);
+  --section-subtitles-color: rgb(53 52 48);
+  --decorated-zone-color: rgb(53 52 48);
 }
 
 .page.theme_light {
@@ -26,13 +30,17 @@
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: rgb(255 141 203);
-    --border-color: rgb(255 141 203/ 0.4);
+    --border-color: rgb(50 49 45/ 0.4);
     --paragraph-font-family: rgb(53 52 48);
     --background-image: url(../images/cover-image-light.png);
     --title-color: rgb(255 194 230);
+    --background-color: #fff1f7;
+    --section-titles-color: rgb(53 52 48);
+    --section-subtitles-color: rgb(53 52 48);
+    --decorated-zone-color: rgb(53 52 48);
   }
 
-  .page {
-    background-color: #fff1f7;
+  .theme_auto .decorated-element {
+    display: none;
   }
 }

@@ -10,6 +10,10 @@
   --paragraph-font-family: rgb(241 178 206);
   --background-image: url(../images/cover-image-dark.png);
   --title-color: rgb(219 0 255);
+  --background-color: #000028;
+  --section-titles-color: rgb(255 0 112);
+  --section-subtitles-color: rgb(0 0 40);
+  --decorated-zone-color: rgb(255 0 112);
 }
 
 .page.theme_dark {
@@ -26,9 +30,9 @@
     --paragraph-font-family: rgb(241 178 206);
     --background-image: url(../images/cover-image-dark.png);
     --title-color: rgb(219 0 255);
-  }
-
-  .page {
-    background-color: #000028;
+    --background-color: #000028;
+    --section-titles-color: rgb(255 0 112);
+    --section-subtitles-color: rgb(0 0 40);
+    --decorated-zone-color: rgb(255 0 112);
   }
 }
