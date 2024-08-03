@@ -135,7 +135,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--decorated-zone-color);
+  border-bottom: 1px solid currentColor;
 }
 
 .header__theme-menu-button:focus-visible:not(.hover) {
@@ -417,7 +417,8 @@
 /*****         SCREEN >= 1024px         *****/
 
 @media (min-width: 1024px) {
-  .content, .content__main {
+  .content,
+  .content__main {
     width: 1024px;
   }
 
